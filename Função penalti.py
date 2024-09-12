@@ -1,8 +1,4 @@
 import random
-print('--------------------RODADA 2--------------------')
-print('partida 7')
-print('--casa--: time 1')
-print('--visitante--: time 8')
 L1 = ['penalty 1 T1:', 'penalty 2 T1:', 'penalty 3 T1:', 'penalty 4 T1:', 'penalty 5 T1:', 'penalty 6 T1:', 'penalty 7 T1:', 'penalty 8 T1:', 'penalty 9 T1:', 'penalty 10 T1:', 'penalty 11 T1:', 'penalty 12 T1:', 'penalty 13 T1:', 'penalty 14 T1:', 'penalty 15 T1:']
 L2 = ['penalty 1 T2:', 'penalty 2 T2:', 'penalty 3 T2:', 'penalty 4 T2:', 'penalty 5 T2:', 'penalty 6 T2:', 'penalty 7 T2:', 'penalty 8 T2:', 'penalty 9 T2:', 'penalty 10 T2:', 'penalty 11 T2:', 'penalty 12 T2:', 'penalty 13 T2:', 'penalty 14 T2:', 'penalty 15 T2:']
 L3 = ['penalty 1 T3:', 'penalty 2 T3:', 'penalty 3 T3:', 'penalty 4 T3:', 'penalty 5 T3:', 'penalty 6 T3:', 'penalty 7 T3:', 'penalty 8 T3:', 'penalty 9 T3:', 'penalty 10 T3:', 'penalty 11 T3:', 'penalty 12 T3:', 'penalty 13 T3:', 'penalty 14 T3:', 'penalty 15 T3:']
@@ -32,17 +28,13 @@ sgT7 = 0
 sgT8 = 0
 P = [pt1, pt2, pt3, pt4, pt5, pt6, pt7, pt8]
 SG = [sgT1, sgT2, sgT3, sgT4, sgT5, sgT6, sgT7, sgT8]
-def decisão_pênaltis(a,b):
-    lt = [a,b]
-    lt[0] = random.choice(lt)
-    lt[1] = random.choice(lt)
-    return(lt[0], lt[1])
-def rodada_princ_pênaltis(c,d,e,f,g,h,i,j,k,l):
-    a = 'X'
-    b = 'O'
-    p1 = decisão_pênaltis(a,b)
-    print(c[0],p1[0])
-    print(d[0],p1[1])
+
+def rodada_princ_pênaltis(a,b,c,d,e,f,g,h,i,j,k,l,m,n):
+    lista = [a,b]
+    p1t1 = random.choice(lista)
+    p1t2 = random.choice(lista)
+    print(c[0], p1t1)
+    print(d[0], p1t2)
     print('digite 0 para sair do jogo ou 1 para continuar')
     s = int(input('digite o valor:' ))
     if s == 0:
@@ -53,62 +45,74 @@ def rodada_princ_pênaltis(c,d,e,f,g,h,i,j,k,l):
         print('fim do jogo')
         exit
     elif s == 1:
-        p2 = decisão_pênaltis(a,b)
-        print(c[1],p2[0])
-        print(d[1],p2[1])
-    s = int(input('digite 1 para proxima rodada de penaltis:' ))
+        p2t1 = random.choice(lista)
+        p2t2 = random.choice(lista)
+        print(c[1], p2t1)
+        print(d[1], p2t2)
+        s = int(input('digite 1 para proxima rodada de penaltis:' ))
     if s != 1:
         print('fim do jogo')
         exit
     else:
-        p3 = decisão_pênaltis(a,b)
-        print(c[2], p3[0])
-        print(d[2], p3[1])
-    s = int(input('digite 1 para proxima rodada de penaltis:' ))
+        p3t1 = random.choice(lista)
+        p3t2 = random.choice(lista)
+        print(c[2], p3t1)
+        print(d[2], p3t2)
+        s = int(input('digite 1 para proxima rodada de penaltis:' ))
     if s != 1:
         print('fim do jogo')
         exit
     else:
-        p4 = decisão_pênaltis(a,b)
-        print(c[3], p4[0])
-        print(d[3], p4[1])
-    s = int(input('digite 1 para proxima rodada de penaltis:' ))
+        p4t1 = random.choice(lista)
+        p4t2 = random.choice(lista)
+        print(c[3], p4t1)
+        print(d[3], p4t2)
+        s = int(input('digite 1 para proxima rodada de penaltis:' ))
     if s != 1:
         print('fim do jogo')
         exit
     else:
-        p5 = decisão_pênaltis(a,b)
-        print(c[4], p5[0])
-        print(d[4], p5[1])
-        listaPT1 = [p1[0], p2[0], p3[0], p4[0], p5[0]]
-        listaPT2 = [p1[1], p2[1], p3[1], p4[1], p5[1]]
-        PpT1 = [listaPT1 for listaPT1 in listaPT1 if listaPT1 != 'X']
-        PpT2 = [listaPT2 for listaPT2 in listaPT2 if listaPT2 != 'X']
-        print(listaPT1)
-        print(listaPT2)
-        print(e, len(PpT1))
-        print(f, len(PpT2))
+        p5t1 = random.choice(lista)
+        p5t2 = random.choice(lista)
+        print(c[4], p5t1)
+        print(d[4], p5t2)
+    listaPT1 = [p1t1, p2t1, p3t1, p4t1, p5t1]
+    listaPT2 = [p1t2, p2t2, p3t2, p4t2, p5t2]
+    PpT1 = [listaPT1 for listaPT1 in listaPT1 if listaPT1 != 'X']
+    PpT2 = [listaPT2 for listaPT2 in listaPT2 if listaPT2 != 'X']
+    print(listaPT1)
+    print(listaPT2)
+    print(e, len(PpT1))
+    print(f, len(PpT2))
     if len(PpT1) > len(PpT2):
-        g
-        i += 3
-        j += 0
-        k += len(PpT1)
-        Lmes = [g, i, j]
-        return(Lmes)
+        print(g)
+        k += 3
+        l += 0
+        m += len(PpT1)
+        n += len(PpT2)
+        R1 = (i, k)
+        R2 = (j, l)
+        Res = [R1[0], R1[1], R2[0], R2[1], m, n]
+        return(Res)
+        return(v)
     elif len(PpT1) < len(PpT2):
-        h
-        j += 3
-        i += 0
-        l += len(PpT2)
-        Lmes = [h, j, i]
-        return(Lmes)
+        print(h)
+        k += 0
+        l += 3
+        m += len(PpT1)
+        n += len(PpT2)
+        R1 = (i, k)
+        R2 = (j, l)
+        Res = [R1[0], R1[1], R2[0], R2[1], m, n]
+        return(Res)
     elif len(PpT1) == len(PpT2):
         print('agora é disputa nas alternadas, até alguem errar')
-        p6 = decisão_pênaltis(a,b)
-        print(c[5], p6[0])
-        print(c[5], p6[1])
-        listaPT1 = [p1[0], p2[0], p3[0], p4[0], p5[0], p6[0]]
-        listaPT2 = [p1[1], p2[1], p3[1], p4[1], p5[1], p6[1]]
+        p6t1 = random.choice(lista)
+        p6t2 = random.choice(lista)
+        print(c[5], p6t1)
+        print(d[5], p6t2)
+        listaPT1 = [p1t1, p2t1, p3t1, p4t1, p5t1, p6t1]
+        listaPT2 = [p1t2, p2t2, p3t2, p4t2, p5t2, p6t2]
         PpT1 = [listaPT1 for listaPT1 in listaPT1 if listaPT1 != 'X']
         PpT2 = [listaPT2 for listaPT2 in listaPT2 if listaPT2 != 'X']
         print(listaPT1)
@@ -116,25 +120,32 @@ def rodada_princ_pênaltis(c,d,e,f,g,h,i,j,k,l):
         print(e, len(PpT1))
         print(f, len(PpT2))
         if len(PpT1) > len(PpT2):
-            g
-            i += 3
-            j += 0
-            k += len(PpT1)
-            Lmes = [g, i, j]
-            return(Lmes)
+            print(g)
+            k += 3
+            l += 0
+            m += len(PpT1)
+            n += len(PpT2)
+            R1 = (i, k)
+            R2 = (j, l)
+            Res = [R1[0], R1[1], R2[0], R2[1], m, n]
+            return(Res)
         elif len(PpT1) < len(PpT2):
-            h
-            j += 3
-            i += 0
-            l += len(PpT2)
-            Lmes = [h, j, i]
-            return(Lmes)
+            print(h)
+            k += 0
+            l += 3
+            m += len(PpT1)
+            n += len(PpT2)
+            R1 = (i, k)
+            R2 = (j, l)
+            Res = [R1[0], R1[1], R2[0], R2[1], m, n]
+            return(Res)
         elif len(PpT1) == len(PpT2):
-            p7 = decisão_pênaltis(a,b)
-            print(c[6], p7[0])
-            print(c[6], p7[1])
-            listaPT1 = [p1[0], p2[0], p3[0], p4[0], p5[0], p6[0], p7[0]]
-            listaPT2 = [p1[1], p2[1], p3[1], p4[1], p5[1], p6[1], p7[1]]
+            p7t1 = random.choice(lista)
+            p7t2 = random.choice(lista)
+            print(c[6], p7t1)
+            print(d[6], p7t2)
+            listaPT1 = [p1t1, p2t1, p3t1, p4t1, p5t1, p6t1, p7t1]
+            listaPT2 = [p1t2, p2t2, p3t2, p4t2, p5t2, p6t2, p7t2]
             PpT1 = [listaPT1 for listaPT1 in listaPT1 if listaPT1 != 'X']
             PpT2 = [listaPT2 for listaPT2 in listaPT2 if listaPT2 != 'X']
             print(listaPT1)
@@ -142,25 +153,32 @@ def rodada_princ_pênaltis(c,d,e,f,g,h,i,j,k,l):
             print(e, len(PpT1))
             print(f, len(PpT2))
             if len(PpT1) > len(PpT2):
-                g
-                i += 3
-                j += 0
-                k += len(PpT1)
-                Lmes = [g, i, j]
-                return(Lmes)
+                print(g)
+                k += 3
+                l += 0
+                m += len(PpT1)
+                n += len(PpT2)
+                R1 = (i, k)
+                R2 = (j, l)
+                Res = [R1[0], R1[1], R2[0], R2[1], m, n]
+                return(Res)
             elif len(PpT1) < len(PpT2):
-                h
-                j += 3
-                i += 0
-                l += len(PpT2)
-                Lmes = [h, j, i]
-                return(Lmes)
+                print(h)
+                k += 0
+                l += 3
+                m += len(PpT1)
+                n += len(PpT2)
+                R1 = (i, k)
+                R2 = (j, l)
+                Res = [R1[0], R1[1], R2[0], R2[1], m, n]
+                return(Res)
             elif len(PpT1) == len(PpT2):
-                p8 = decisão_pênaltis(a,b)
-                print(c[7], p8[0])
-                print(c[7], p8[1])
-                listaPT1 = [p1[0], p2[0], p3[0], p4[0], p5[0], p6[0], p7[0], p8[0]]
-                listaPT2 = [p1[1], p2[1], p3[1], p4[1], p5[1], p6[1], p7[1], p8[1]]
+                p8t1 = random.choice(lista)
+                p8t2 = random.choice(lista)
+                print(c[7], p8t1)
+                print(d[7], p8t2)
+                listaPT1 = [p1t1, p2t1, p3t1, p4t1, p5t1, p6t1, p7t1, p8t1]
+                listaPT2 = [p1t2, p2t2, p3t2, p4t2, p5t2, p6t2, p7t2, p8t2]
                 PpT1 = [listaPT1 for listaPT1 in listaPT1 if listaPT1 != 'X']
                 PpT2 = [listaPT2 for listaPT2 in listaPT2 if listaPT2 != 'X']
                 print(listaPT1)
@@ -168,25 +186,32 @@ def rodada_princ_pênaltis(c,d,e,f,g,h,i,j,k,l):
                 print(e, len(PpT1))
                 print(f, len(PpT2))
                 if len(PpT1) > len(PpT2):
-                    g
-                    i += 3
-                    j += 0
-                    k += len(PpT1)
-                    Lmes = [g, i, j]
-                    return(Lmes)
+                    print(g)
+                    k += 3
+                    l += 0
+                    m += len(PpT1)
+                    n += len(PpT2)
+                    R1 = (i, k)
+                    R2 = (j, l)
+                    Res = [R1[0], R1[1], R2[0], R2[1], m, n]
+                    return(Res)
                 elif len(PpT1) < len(PpT2):
-                    h
-                    j += 3
-                    i += 0
-                    l += len(PpT2)
-                    Lmes = [h, j, i]
-                    return(Lmes)
+                    print(h)
+                    k += 0
+                    l += 3
+                    m += len(PpT1)
+                    n += len(PpT2)
+                    R1 = (i, k)
+                    R2 = (j, k)
+                    Res = [R1[0], R1[1], R2[0], R2[1], m, n]
+                    return(Res)
                 elif len(PpT1) == len(PpT2):
-                    p9 = decisão_pênaltis(a,b)
-                    print(c[8], p9[0])
-                    print(c[8], p9[1])
-                    listaPT1 = [p1[0], p2[0], p3[0], p4[0], p5[0], p6[0], p7[0], p8[0], p9[0]]
-                    listaPT2 = [p1[1], p2[1], p3[1], p4[1], p5[1], p6[1], p7[1], p8[1], p9[1]]
+                    p9t1 = random.choice(lista)
+                    p9t2 = random.choice(lista)
+                    print(c[8], p9t1)
+                    print(d[8], p9t2)
+                    listaPT1 = [p1t1, p2t1, p3t1, p4t1, p5t1, p6t1, p7t1, p8t1, p9t1]
+                    listaPT2 = [p1t2, p2t2, p3t2, p4t2, p5t2, p6t2, p7t2, p8t2, p9t2]
                     PpT1 = [listaPT1 for listaPT1 in listaPT1 if listaPT1 != 'X']
                     PpT2 = [listaPT2 for listaPT2 in listaPT2 if listaPT2 != 'X']
                     print(listaPT1)
@@ -194,25 +219,32 @@ def rodada_princ_pênaltis(c,d,e,f,g,h,i,j,k,l):
                     print(e, len(PpT1))
                     print(f, len(PpT2))
                     if len(PpT1) > len(PpT2):
-                        g
-                        i += 3
-                        j += 0
-                        k += len(PpT1)
-                        Lmes = [g, i, j]
-                        return(Lmes)
+                        print(g)
+                        k += 3
+                        l += 0
+                        m += len(PpT1)
+                        n += len(PpT2)
+                        R1 = (i, k)
+                        R2 = (j, l)
+                        Res = [R1[0], R1[1], R2[0], R2[1], m, n]
+                        return(Res)
                     elif len(PpT1) < len(PpT2):
-                        h
-                        j += 3
-                        i += 0
-                        l += len(PpT2)
-                        Lmes = [h, j, i]
-                        return(Lmes)
+                        print(h)
+                        k += 0
+                        l += 3
+                        m += len(PpT1)
+                        n += len(PpT2)
+                        R1 = (i, k)
+                        R2 = (j, l)
+                        Res = [R1[0], R1[1], R2[0], R2[1], m, n]
+                        return(Res)
                     elif len(PpT1) == len(PpT2):
-                        p10 = decisão_pênaltis(a,b)
-                        print(c[9], p10[0])
-                        print(c[9], p10[1])
-                        listaPT1 = [p1[0], p2[0], p3[0], p4[0], p5[0], p6[0], p7[0], p8[0], p9[0], p10[0]]
-                        listaPT2 = [p1[1], p2[1], p3[1], p4[1], p5[1], p6[1], p7[1], p8[1], p9[1], p10[1]]
+                        p10t1 = random.choice(lista)
+                        p10t2 = random.choice(lista)
+                        print(c[9], p10t1)
+                        print(d[9], p10t2)
+                        listaPT1 = [p1t1, p2t1, p3t1, p4t1, p5t1, p6t1, p7t1, p8t1, p9t1, p10t1]
+                        listaPT2 = [p1t2, p2t2, p3t2, p4t2, p5t2, p6t2, p7t2, p8t2, p9t2, p10t2]
                         PpT1 = [listaPT1 for listaPT1 in listaPT1 if listaPT1 != 'X']
                         PpT2 = [listaPT2 for listaPT2 in listaPT2 if listaPT2 != 'X']
                         print(listaPT1)
@@ -220,25 +252,32 @@ def rodada_princ_pênaltis(c,d,e,f,g,h,i,j,k,l):
                         print(e, len(PpT1))
                         print(f, len(PpT2))
                         if len(PpT1) > len(PpT2):
-                            g
-                            i += 3
-                            j += 0
-                            k += len(PpT1)
-                            Lmes = [g, i, j]
-                            return(Lmes)
+                            print(g)
+                            k += 3
+                            l += 0
+                            m += len(PpT1)
+                            n += len(PpT2)
+                            R1 = (i, k)
+                            R2 = (j, l)
+                            Res = [R1[0], R1[1], R2[0], R2[1], m, n]
+                            return(Res)
                         elif len(PpT1) < len(PpT2):
-                            h
-                            j += 3
-                            i += 0
-                            l += len(PpT2)
-                            Lmes = [h, j, i]
-                            return(Lmes)
+                            print(h)
+                            k += 0
+                            l += 3
+                            m += len(PpT1)
+                            n += len(PpT2)
+                            R1 = (i, k)
+                            R2 = (j, l)
+                            Res = [R1[0], R1[1], R2[0], R2[1], m, n]
+                            return(Res)
                         elif len(PpT1) == len(PpT2):
-                            p11 = decisão_pênaltis(a,b)
-                            print(c[10], p11[0])
-                            print(c[10], p11[1])
-                            listaPT1 = [p1[0], p2[0], p3[0], p4[0], p5[0], p6[0], p7[0], p8[0], p9[0], p10[0], p11[0]]
-                            listaPT2 = [p1[1], p2[1], p3[1], p4[1], p5[1], p6[1], p7[1], p8[1], p9[1], p10[1], p11[1]]
+                            p11t1 = random.choice(lista)
+                            p11t2 = random.choice(lista)
+                            print(c[10], p11t1)
+                            print(d[10], p11t2)
+                            listaPT1 = [p1t1, p2t1, p3t1, p4t1, p5t1, p6t1, p7t1, p8t1, p9t1, p10t1, p11t1]
+                            listaPT2 = [p1t2, p2t2, p3t2, p4t2, p5t2, p6t2, p7t2, p8t2, p9t2, p10t2, p11t2]
                             PpT1 = [listaPT1 for listaPT1 in listaPT1 if listaPT1 != 'X']
                             PpT2 = [listaPT2 for listaPT2 in listaPT2 if listaPT2 != 'X']
                             print(listaPT1)
@@ -246,25 +285,32 @@ def rodada_princ_pênaltis(c,d,e,f,g,h,i,j,k,l):
                             print(e, len(PpT1))
                             print(f, len(PpT2))
                             if len(PpT1) > len(PpT2):
-                                g
-                                i += 3
-                                j += 0
-                                k += len(PpT1)
-                                Lmes = [g, i, j]
-                                return(Lmes)
+                                print(g)
+                                k += 3
+                                l += 0
+                                m += len(PpT1)
+                                n += len(PpT2)
+                                R1 = (i, k)
+                                R2 = (j, l)
+                                Res = [R1[0], R1[1], R2[0], R2[1], m, n]
+                                return(Res)
                             elif len(PpT1) < len(PpT2):
-                                h
-                                j += 3
-                                i += 0
-                                l += len(PpT2)
-                                Lmes = [h, j, i]
-                                return(Lmes)
+                                print(h)
+                                k += 3
+                                l += 0
+                                m += len(PpT1)
+                                n += len(PpT2)
+                                R1 = (i, k)
+                                R2 = (j, l)
+                                Res = [R1[0], R1[1], R2[0], R2[1], m, n]
+                                return(Res)
                             elif len(PpT1) == len(PpT2):
-                                p12 = decisão_pênaltis(a,b)
-                                print(c[11], p12[0])
-                                print(c[11], p12[1])
-                                listaPT1 = [p1[0], p2[0], p3[0], p4[0], p5[0], p6[0], p7[0], p8[0], p9[0], p10[0], p11[0], p12[0]]
-                                listaPT2 = [p1[1], p2[1], p3[1], p4[1], p5[1], p6[1], p7[1], p8[1], p9[1], p10[1], p11[1], p12[1]]
+                                p12t1 = random.choice(lista)
+                                p12t2 = random.choice(lista)
+                                print(c[11], p12t1)
+                                print(d[11], p12t2)
+                                listaPT1 = [p1t1, p2t1, p3t1, p4t1, p5t1, p6t1, p7t1, p8t1, p9t1, p10t1, p11t1, p12t1]
+                                listaPT2 = [p1t2, p2t2, p3t2, p4t2, p5t2, p6t2, p7t2, p8t2, p9t2, p10t2, p11t2, p12t2]
                                 PpT1 = [listaPT1 for listaPT1 in listaPT1 if listaPT1 != 'X']
                                 PpT2 = [listaPT2 for listaPT2 in listaPT2 if listaPT2 != 'X']
                                 print(listaPT1)
@@ -272,25 +318,32 @@ def rodada_princ_pênaltis(c,d,e,f,g,h,i,j,k,l):
                                 print(e, len(PpT1))
                                 print(f, len(PpT2))
                                 if len(PpT1) > len(PpT2):
-                                    g
-                                    i += 3
-                                    j += 0
-                                    k += len(PpT1)
-                                    Lmes = [g, i, j]
-                                    return(Lmes)
+                                    print(g)
+                                    k += 3
+                                    l += 0
+                                    m += len(PpT1)
+                                    n += len(PpT2)
+                                    R1 = (i, k)
+                                    R2 = (j, l)
+                                    Res = [R1[0], R1[1], R2[0], R2[1], m, n]
+                                    return(Res)
                                 elif len(PpT1) < len(PpT2):
-                                    h
-                                    j += 3
-                                    i += 0
-                                    l += len(PpT2)
-                                    Lmes = [h, j, i]
-                                    return(Lmes)
+                                    print(h)
+                                    k += 0
+                                    l += 3
+                                    m += len(PpT1)
+                                    n += len(PpT2)
+                                    R1 = (i, k)
+                                    R2 = (j, l)
+                                    Res = [R1[0], R1[1], R2[0], R2[1], m, n]
+                                    return(Res)
                                 elif len(PpT1) == len(PpT2):
-                                    p13 = decisão_pênaltis(a,b)
-                                    print(c[12], p13[0])
-                                    print(c[12], p13[1])
-                                    listaPT1 = [p1[0], p2[0], p3[0], p4[0], p5[0], p6[0], p7[0], p8[0], p9[0], p10[0], p11[0], p12[0], p13[0]]
-                                    listaPT2 = [p1[1], p2[1], p3[1], p4[1], p5[1], p6[1], p7[1], p8[1], p9[1], p10[1], p11[1], p12[1], p13[1]]
+                                    p13t1 = random.choice(lista)
+                                    p13t2 = random.choice(lista)
+                                    print(c[12], p13t1)
+                                    print(d[12], p13t2)
+                                    listaPT1 = [p1t1, p2t1, p3t1, p4t1, p5t1, p6t1, p7t1, p8t1, p9t1, p10t1, p11t1, p12t1, p13t1]
+                                    listaPT2 = [p1t2, p2t2, p3t2, p4t2, p5t2, p6t2, p7t2, p8t2, p9t2, p10t2, p11t2, p12t2, p13t2]
                                     PpT1 = [listaPT1 for listaPT1 in listaPT1 if listaPT1 != 'X']
                                     PpT2 = [listaPT2 for listaPT2 in listaPT2 if listaPT2 != 'X']
                                     print(listaPT1)
@@ -298,25 +351,32 @@ def rodada_princ_pênaltis(c,d,e,f,g,h,i,j,k,l):
                                     print(e, len(PpT1))
                                     print(f, len(PpT2))
                                     if len(PpT1) > len(PpT2):
-                                        g
-                                        i += 3
-                                        j += 0
-                                        k += len(PpT1)
-                                        Lmes = [g, i, j]
-                                        return(Lmes)
+                                        print(g)
+                                        k += 3
+                                        l += 0
+                                        m += len(PpT1)
+                                        n += len(PpT2)
+                                        R1 = (i, k)
+                                        R2 = (j, l)
+                                        Res = [R1[0], R1[1], R2[0], R2[1], m, n]
+                                        return(Res)
                                     elif len(PpT1) < len(PpT2):
-                                        h
-                                        j += 3
-                                        i += 0
-                                        l += len(PpT2)
-                                        Lmes = [h, j, i]
-                                        return(Lmes)
+                                        print(h)
+                                        k += 0
+                                        l += 3
+                                        m += len(PpT1)
+                                        n += len(PpT2)
+                                        R1 = (i, k)
+                                        R2 = (j, l)
+                                        Res = [R1[0], R1[1], R2[0], R2[1], m, n]
+                                        return(Res)
                                     elif len(PpT1) == len(PpT2):
-                                        p14 = decisão_pênaltis(a,b)
-                                        print(c[13], p14[0])
-                                        print(c[13], p14[1])
-                                        listaPT1 = [p1[0], p2[0], p3[0], p4[0], p5[0], p6[0], p7[0], p8[0], p9[0], p10[0], p11[0], p12[0], p13[0], p14[0]]
-                                        listaPT2 = [p1[1], p2[1], p3[1], p4[1], p5[1], p6[1], p7[1], p8[1], p9[1], p10[1], p11[1], p12[1], p13[1], p14[1]]
+                                        p14t1 = random.choice(lista)
+                                        p14t2 = random.choice(lista)
+                                        print(c[13], p14t1)
+                                        print(d[13], p14t2)
+                                        listaPT1 = [p1t1, p2t1, p3t1, p4t1, p5t1, p6t1, p7t1, p8t1, p9t1, p10t1, p11t1, p12t1, p13t1, p14t1]
+                                        listaPT2 = [p1t2, p2t2, p3t2, p4t2, p5t2, p6t2, p7t2, p8t2, p9t2, p10t2, p11t2, p12t2, p13t2, p14t2]
                                         PpT1 = [listaPT1 for listaPT1 in listaPT1 if listaPT1 != 'X']
                                         PpT2 = [listaPT2 for listaPT2 in listaPT2 if listaPT2 != 'X']
                                         print(listaPT1)
@@ -324,25 +384,32 @@ def rodada_princ_pênaltis(c,d,e,f,g,h,i,j,k,l):
                                         print(e, len(PpT1))
                                         print(f, len(PpT2))
                                         if len(PpT1) > len(PpT2):
-                                            g
-                                            i += 3
-                                            j += 0
-                                            k += len(PpT1)
-                                            Lmes = [g, i, j]
-                                            return(Lmes)
+                                            print(g)
+                                            k += 3
+                                            l += 0
+                                            m += len(PpT1)
+                                            n += len(PpT2)
+                                            R1 = (i, k)
+                                            R2 = (j, l)
+                                            Res = [R1[0], R1[1], R2[0], R2[1], m, n]
+                                            return(Res)
                                         elif len(PpT1) < len(PpT2):
-                                            h
-                                            j += 3
-                                            i += 0
-                                            l += len(PpT2)
-                                            Lmes = [h, j, i]
-                                            return(Lmes)
+                                            print(h)
+                                            k += 0
+                                            l += 3
+                                            m += len(PpT1)
+                                            n += len(PpT2)
+                                            R1 = (i, k)
+                                            R2 = (j, l)
+                                            Res = [R1[0], R1[1], R2[0], R2[1], m, n]
+                                            return(Res)
                                         elif len(PpT1) == len(PpT2):
-                                            p15 = decisão_pênaltis(a,b)
-                                            print(c[14], p15[0])
-                                            print(c[14], p15[1])
-                                            listaPT1 = [p1[0], p2[0], p3[0], p4[0], p5[0], p6[0], p7[0], p8[0], p9[0], p10[0], p11[0], p12[0], p13[0], p14[0], p15[0]]
-                                            listaPT2 = [p1[1], p2[1], p3[1], p4[1], p5[1], p6[1], p7[1], p8[1], p9[1], p10[1], p11[1], p12[1], p13[1], p14[1], p15[1]]
+                                            p15t1 = random.choice(lista)
+                                            p15t2 = random.choice(lista)
+                                            print(c[14], p15t1)
+                                            print(d[14], p15t2)
+                                            listaPT1 = [p1t1, p2t1, p3t1, p4t1, p5t1, p6t1, p7t1, p8t1, p9t1, p10t1, p11t1, p12t1, p13t1, p14t1, p15t1]
+                                            listaPT2 = [p1t2, p2t2, p3t2, p4t2, p5t2, p6t2, p7t2, p8t2, p9t2, p10t2, p11t2, p12t2, p13t2, p14t2, p15t2]
                                             PpT1 = [listaPT1 for listaPT1 in listaPT1 if listaPT1 != 'X']
                                             PpT2 = [listaPT2 for listaPT2 in listaPT2 if listaPT2 != 'X']
                                             print(listaPT1)
@@ -350,136 +417,160 @@ def rodada_princ_pênaltis(c,d,e,f,g,h,i,j,k,l):
                                             print(e, len(PpT1))
                                             print(f, len(PpT2))
                                             if len(PpT1) > len(PpT2):
-                                                g
-                                                i += 3
-                                                j += 0
-                                                k += len(PpT1)
-                                                Lmes = [g, i, j]
-                                                return(Lmes)
+                                                print(g)
+                                                k += 3
+                                                l += 0
+                                                m += len(PpT1)
+                                                n += len(PpT2)
+                                                R1 = (i, k)
+                                                R2 = (j, l)
+                                                Res = [R1[0], R1[1], R2[0], R2[1], m, n]
+                                                return(Res)
                                             elif len(PpT1) < len(PpT2):
-                                                h
-                                                j += 3
-                                                i += 0
-                                                l += len(PpT2)
-                                                Lmes = [h, j, i]
-                                                return(Lmes)
-                                            
-                                        
-   
+                                                print(h)
+                                                k += 0
+                                                l += 3
+                                                m += len(PpT1)
+                                                n += len(PpT2)
+                                                R1 = (i, k)
+                                                R2 = (j, l)
+                                                Res = [R1[0], R1[1], R2[0], R2[1], m, n]
+                                                return(Res)
 
+print('--------------------RODADA 1--------------------')
+print('partida 1')
+print('--casa--: time 1')
+print('--visitante--: time 2')
+a = 'X'
+b = 'O'
 c = L1
 d = L2
 e = Q[0]
 f = Q[1]
 g = R[0]
 h = R[1]
-i = P[0]
-j = P[1]
-k = SG[0]
-l = SG[1]
-resultado = rodada_princ_pênaltis(c,d,e,f,g,h,i,j,k,l)
-print(resultado[0])
-print(S[0], resultado[2])
-print(S[1], resultado[1])
+i = S[0]
+j = S[1]
+k = P[0]
+l = P[1]
+m = SG[0]
+n = SG[1]
+Resultado1 = rodada_princ_pênaltis(a,b,c,d,e,f,g,h,i,j,k,l,m,n)
+print(Resultado1[0], Resultado1[1])
+print(Resultado1[2], Resultado1[3])
 
+print('--------------------RODADA 1--------------------')
+print('partida 2')
+print('--casa--: time 1')
+print('--visitante--: time 3')
+a = 'X'
+b = 'O'
 c = L1
 d = L3
 e = Q[0]
 f = Q[2]
 g = R[0]
 h = R[2]
-i = P[0]
-j = P[2]
-k = SG[0]
-l = SG[2]
-resultado = rodada_princ_pênaltis(c,d,e,f,g,h,i,j,k,l)
-print(resultado[0])
-print(S[0], resultado[2])
-print(S[2], resultado[1])
+i = S[0]
+j = S[2]
+k = P[0]
+l = P[2]
+m = SG[0]
+n = SG[2]
+Resultado2 = rodada_princ_pênaltis(a,b,c,d,e,f,g,h,i,j,k,l,m,n)
+Resultado2[1] = Resultado2[1] + Resultado1[1]
+print(Resultado2[0], Resultado2[1])
+print(Resultado2[2], Resultado2[3])
 
+print('--------------------RODADA 1--------------------')
+print('partida 3')
+print('--casa--: time 1')
+print('--visitante--: time 4')
+a = 'X'
+b = 'O'
 c = L1
 d = L4
 e = Q[0]
 f = Q[3]
 g = R[0]
 h = R[3]
-i = P[0]
-j = P[3]
-k = SG[0]
-l = SG[3]
-resultado = rodada_princ_pênaltis(c,d,e,f,g,h,i,j,k,l)
-print(resultado[0])
-print(S[0], resultado[2])
-print(S[3], resultado[1])
+i = S[0]
+j = S[3]
+k = P[0]
+l = P[3]
+m = SG[0]
+n = SG[3]
+Resultado3 = rodada_princ_pênaltis(a,b,c,d,e,f,g,h,i,j,k,l,m,n)
+Resultado3[1] = Resultado3[1] + Resultado2[1]
+print(Resultado3[0], Resultado3[1])
+print(Resultado3[2], Resultado3[3])
 
+print('--------------------RODADA 1--------------------')
+print('partida 4')
+print('--casa--: time 1')
+print('--visitante--: time 5')
+a = 'X'
+b = 'O'
 c = L1
 d = L5
 e = Q[0]
 f = Q[4]
 g = R[0]
 h = R[4]
-i = P[0]
-j = P[4]
-k = SG[0]
-l = SG[4]
-resultado = rodada_princ_pênaltis(c,d,e,f,g,h,i,j,k,l)
-print(resultado[0])
-print(S[0], resultado[2])
-print(S[4], resultado[1])
+i = S[0]
+j = S[4]
+k = P[0]
+l = P[4]
+m = SG[0]
+n = SG[4]
+Resultado4 = rodada_princ_pênaltis(a,b,c,d,e,f,g,h,i,j,k,l,m,n)
+Resultado4[1] = Resultado4[1] + Resultado3[1]
+print(Resultado4[0], Resultado4[1])
+print(Resultado4[2], Resultado4[3])
 
-c = L1
-d = L6
-e = Q[0]
-f = Q[5]
-g = R[0]
-h = R[5]
-i = P[0]
-j = P[5]
-k = SG[0]
-l = SG[5]
-resultado = rodada_princ_pênaltis(c,d,e,f,g,h,i,j,k,l)
-print(resultado[0])
-print(S[0], resultado[2])
-print(S[5], resultado[1])
+SgT1 = Resultado1[4] + Resultado2[4] + Resultado3[4] + Resultado4[4]
+SgT2 = Resultado1[5]
+SgT3 = Resultado2[5]
+SgT4 = Resultado3[5]
+SgT5 = Resultado4[5]
+SgT6 = 0
+SgT7 = 0
+SgT8 = 0
 
-c = L1
-d = L7
-e = Q[0]
-f = Q[6]
-g = R[0]
-h = R[6]
-i = P[0]
-j = P[6]
-k = SG[0]
-l = SG[6]
-resultado = rodada_princ_pênaltis(c,d,e,f,g,h,i,j,k,l)
-print(resultado[0])
-print(S[0], resultado[2])
-print(S[6], resultado[1])
+print('--------------------PONTUAÇÃO FINAL RODADA 1--------------------')
 
-c = L1
-d = L8
-e = Q[0]
-f = Q[7]
-g = R[0]
-h = R[7]
-i = P[0]
-j = P[7]
-k = SG[0]
-l = SG[7]
-resultado = rodada_princ_pênaltis(c,d,e,f,g,h,i,j,k,l)
-print(resultado[0])
-print(S[0], resultado[2])
-print(S[7], resultado[1])
+print('PONTUAÇÃO ATUAL')
 
+d = {S[0]:Resultado4[1], S[1]:Resultado1[3], S[2]:Resultado2[3], S[3]:Resultado3[3], S[4]:Resultado4[3], S[5]:P[5], S[6]:P[6], S[7]:P[7]}
+for i in sorted(d, key = d.get, reverse=True):
+    print(i, d[i])
 
-
-
-
-
-
-
-
-
-
-
+print('TABELA ATUAL DOS RESULTADOS')
+print('(Posição, Time, Pontuação, Saldo de Gols)')
+d = [('time 1', Resultado4[1], SgT1), ('time 2', Resultado1[3], SgT2), ('time 3', Resultado2[3], SgT3), ('time 4', Resultado3[3], SgT4), ('time 5', Resultado4[3], SgT5), ('time 6', P[5], SgT6), ('time 7', P[6], SgT7), ('time 8', P[7], SgT8)]
+d.sort(key=lambda x: (x[1], x[2]), reverse=True)
+e = d
+lista1 = list(e[0])
+lista1.insert(0,'1º')
+print(lista1)
+lista2 = list(e[1])
+lista2.insert(0,'2º')
+print(lista2)
+lista3 = list(e[2])
+lista3.insert(0,'3º')
+print(lista3)
+lista4 = list(e[3])
+lista4.insert(0,'4º')
+print(lista4)
+lista5 = list(e[4])
+lista5.insert(0,'5º')
+print(lista5)
+lista6 = list(e[5])
+lista6.insert(0,'6º')
+print(lista6)
+lista7 = list(e[6])
+lista7.insert(0,'7º')
+print(lista7)
+lista8 = list(e[7])
+lista8.insert(0,'8º')
+print(lista8)
