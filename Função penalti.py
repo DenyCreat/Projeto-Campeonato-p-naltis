@@ -1752,7 +1752,7 @@ SgT6 = SgT6 + Resultado26[4] + Resultado27[4]
 SgT7 = SgT7 + Resultado26[5] + Resultado28[4]
 SgT8 = SgT8 + Resultado25[5] + Resultado27[5] + Resultado28[5]
 
-print('--------------------PONTUAÇÃO FINAL RODADA 6--------------------')
+print('--------------------PONTUAÇÃO FINAL RODADA 7--------------------')
 
 print('PONTUAÇÃO ATUAL')
 
