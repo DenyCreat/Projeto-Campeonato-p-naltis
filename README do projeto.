@@ -1,0 +1,43 @@
+REGRAS NO JOGO
+
+Sobre o campeonato Série D Brasileirão
+
+O campeonato de pênaltis série D é composto pelos 64 times divididos em 8 grupos com 8 times cada.
+
+Neste campeonato envolve 3 fases: Fase de grupos, 2º Fase e o famoso "Mata Mata".
+
+Na fase de grupos, cada grupo de 8 times se enfrentarão entre si mesmos em rodadas de ida e volta, 
+ao todo serão 14 partidas (7 idas e 7 voltas). Cada vitória corresponde a 3 pontos no campeonato.
+Somente os 4 primeiros de cada grupo se classificam para 2º Fase do campeonato.
+Caso haja empate na pontuação entre os times, o critério de desempate será o saldo de gols.
+Se ocorrer o empate entre o 4º e 5º lugar do grupo na pontuação e saldo de gols simultaneamente: 
+deverá ocorrer uma partida de desempate onde o vencedor conquistará a ultima vaga do grupo
+para 2º Fase.
+
+Na 2º Fase, os 32 times classificados serão divididos em 16 duplas pela ordem de classificação de
+seus respectivos grupos da fase anterior. Após a divisão, cada integrante da dupla se enfrentarão
+entre si, onde o vencedor de cada disputa será classificado para a fase do "Mata Mata" correspondente
+as 8ºs de finais, 4ºs de finais, semifinais e a grande final.
+
+Na fase do "Mata Mata", o modo da competição será o mesmo da 2ª Fase: Divisão em duplas e cada vencedor
+da dupla avança para as seguintes fases até chegar a grande final, onde será decidido o vencedor da
+série D. Lembrando que os semifinalistas conquistam as vagas para a série C do Brasileirão do próximo ano. 
+
+
+Sobre como jogar o jogo
+
+O jogador será responsável pelo time 1, portanto jogadará as 14 partidas (7 idas e 7 voltas) contra os
+outros times do grupo 1. Para bater o pênalti, o usurário precisa digitar 1. Caso queira por algum
+motivo sair do jogo, basta digitar 0. Se o jogador digitar qualquer coisa que seja diferente dos números
+0 e 1, automaticamente perderá a cobrança de pênaltis, igual como aconte na vida real quando um jogador
+descumpre uma das regras ao bater pênalti no futebol.
+
+O jogador e a máquina baterão cada um: 5 pênaltis. Ao final, quem tiver convertido mais pênalits em gols,
+vence a partida. Se após as 5 rodadas de pênaltis o placar estiver empatado, os times partirão para
+cobranças alternadas, até desempartar. Nas alternadas o jogadador não participa, a máquina que jogará por
+ele. O jogo tem capacidade para até 20 cobranças de cada time.
+
+Considerações finais
+
+Espero que gostem desse joguinho em python e sintam-se a vontade para fazer modificações e soltar a
+criatividade. 
